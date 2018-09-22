@@ -4,20 +4,35 @@
 目标：实现从源程序中分出各种单词，区分出保留字、标识符、常数和运算符等符号。
 
 流程：
+
   选用的是C语言来设计词法分析器，分析的语言也是C语言。
-	  C语言有32个保留字：
-		    auto 	   break	     case		char		  const
+  
+	C语言有32个保留字：
+	
+ 	auto 	   break	     case		char		  const
+	
         continue	   default	 do		    double	  else
+	
         enum	   extern	 float	    for	      goto
+	
         If	       int	     long		register	  return
+	
         Short	   signed	 sizeof	    static	  struct
-		    Switch	   typedef	 union	    unsigned	  void
+	
+	Switch	   typedef	 union	    unsigned	  void
+	
         Volatile	   while
+	
+	
 	符号有：
-		    + 	-	  >	  < 	= 	&	  |	  ~ 	^	  *	  / 	% 	!
-        ?	  :	  , 	.	  ;	  #	  '   "   [	  ] 	{ 	}	  (	  )
-		    +=    -=    >=    <=    ==   &=   |=   ~=    ^=    *=    /=   %=    !=
-		    ++   --    >>    <<   ->     &&    ||                    
+	+ 	-	  >	  < 	= 	&	  |	  ~ 	^	  *	  / 	% 	!
+	
+        ?	  :	  , 	  .	  ;	  #	  '   "   [	  ] 	{ 	}	  (	  )
+	
+	+=  	  -=  	  >=   	 <=    	==   	&=  	 |=  	 ~=  	  ^=  	  *=  	  /= 	  %=  	  !=
+	
+	 ++   	  --   	  >>     <<     ->       &&      ||         
+		    
   1)	输入一段程序，以‘$’美元符号结尾，用字符数组prog保存，最大长度为2000；
   
   2)	用token保存扫描到的单词，ch表示当前读到的字符，p表示数组的下标指针。m表示token的下标，数组number用来保存常量。
